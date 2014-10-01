@@ -9,7 +9,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Physics Conversion Program Alpha Build v. STA"/>
+    <Property name="title" type="java.lang.String" value="Physics Conversion Program Beta Build v.0.1"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>

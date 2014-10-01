@@ -57,7 +57,7 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Physics Conversion Program Alpha Build v. STA");
+        setTitle("Physics Conversion Program Beta Build v.0.1");
 
         forceLabel.setText("Force");
 
