@@ -414,9 +414,7 @@ public class mainFrame extends javax.swing.JFrame {
                 output.setText(temperatureFinal);
             }
             }catch(NumberFormatException hi){
-                errorLabel.setVisible(true);
-                tempField.setEnabled(false);
-                tempField.setText("");
+
             }
         }
         public void pressureFormula(double pressureForce, double pressureArea){
@@ -450,11 +448,7 @@ public class mainFrame extends javax.swing.JFrame {
                 }
             }
             catch(NumberFormatException hi){
-                errorLabel.setVisible(true);
-                forceField.setEnabled(false);
-                areaField.setEnabled(false);
-                forceField.setText("");
-                areaField.setText("");
+
             }
         }
         public void workFormula(double workForce, double workDisplacement){
@@ -476,7 +470,8 @@ public class mainFrame extends javax.swing.JFrame {
                     String displacement = displacementField.getText();
                     double displacement1 = Double.parseDouble(displacement);
                     double work = force1 * displacement1;
-                    String workFinal = String.valueOf(work);
+                    int work1 = (int)work;
+                    String workFinal = String.valueOf(work1);
                     output.setText(workFinal);
                 }else{
                     errorLabel.setVisible(true);
@@ -487,11 +482,7 @@ public class mainFrame extends javax.swing.JFrame {
                 }
             }
             catch(NumberFormatException hi){
-                errorLabel.setVisible(true);
-                forceField.setEnabled(false);
-                areaField.setEnabled(false);
-                forceField.setText("");
-                areaField.setText("");
+
             }
         }
         public void torqueFormula(double torqueForce, double torqueDistance){
@@ -513,7 +504,8 @@ public class mainFrame extends javax.swing.JFrame {
                     String distance = distanceField.getText();
                     double distance1 = Double.parseDouble(distance);
                     double torque = force1 * distance1;
-                    String torqueFinal = String.valueOf(torque);
+                    int torque1 = (int)torque;
+                    String torqueFinal = String.valueOf(torque1);
                     output.setText(torqueFinal);
                 }else{
                     errorLabel.setVisible(true);
@@ -523,11 +515,7 @@ public class mainFrame extends javax.swing.JFrame {
                     areaField.setText("");
                 }
             }catch(NumberFormatException hi){
-                errorLabel.setVisible(true);
-                forceField.setEnabled(false);
-                areaField.setEnabled(false);
-                forceField.setText("");
-                areaField.setText("");
+
             }
         }
     
