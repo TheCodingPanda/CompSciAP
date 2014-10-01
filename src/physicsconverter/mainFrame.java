@@ -432,7 +432,7 @@ public class mainFrame extends javax.swing.JFrame {
                     int pressure4 = (int)pressure3;
                     String pressureFinal = String.valueOf(pressure4);
                     output.setText(pressureFinal);
-                }if(imperialUnits.isSelected()){
+                }else{if(imperialUnits.isSelected()){
                     String force = forceField.getText();
                     double force1 = Double.parseDouble(force);
                     String area = areaField.getText();
@@ -448,6 +448,7 @@ public class mainFrame extends javax.swing.JFrame {
                     forceField.setText("");
                     areaField.setText("");
                 }
+            }
             }
             catch(NumberFormatException hi){
                 errorLabel.setVisible(true);
@@ -470,7 +471,7 @@ public class mainFrame extends javax.swing.JFrame {
                     int work3 = (int)work2;
                     String workFinal = String.valueOf(work3);
                     output.setText(workFinal);
-                }if(imperialUnits.isSelected()){
+                }else{if(imperialUnits.isSelected()){
                     String force = forceField.getText();
                     double force1 = Double.parseDouble(force);
                     String displacement = displacementField.getText();
@@ -485,6 +486,7 @@ public class mainFrame extends javax.swing.JFrame {
                     areaField.setEnabled(false);
                     forceField.setText("");
                     areaField.setText("");
+                }
                 }
             }
             catch(NumberFormatException hi){
@@ -508,7 +510,7 @@ public class mainFrame extends javax.swing.JFrame {
                     int torque3 = (int)torque2;
                     String torqueFinal = String.valueOf(torque3);
                     output.setText(torqueFinal);
-                }if(imperialUnits.isSelected()){
+                }else{if(imperialUnits.isSelected()){
                     String force = forceField.getText();
                     double force1 = Double.parseDouble(force);
                     String distance = distanceField.getText();
@@ -523,6 +525,7 @@ public class mainFrame extends javax.swing.JFrame {
                     areaField.setEnabled(false);
                     forceField.setText("");
                     areaField.setText("");
+                }
                 }
             }catch(NumberFormatException hi){
                 errorLabel.setVisible(true);
