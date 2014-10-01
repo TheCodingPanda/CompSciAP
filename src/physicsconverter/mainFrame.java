@@ -478,13 +478,25 @@ public class mainFrame extends javax.swing.JFrame {
                     double work = force1 * displacement1;
                     String workFinal = String.valueOf(work);
                     output.setText(workFinal);
+                }else{
+                    errorLabel.setVisible(true);
+                    forceField.setEnabled(false);
+                    areaField.setEnabled(false);
+                    forceField.setText("");
+                    areaField.setText("");
                 }
             }
             catch(NumberFormatException hi){
-                
+                errorLabel.setVisible(true);
+                forceField.setEnabled(false);
+                areaField.setEnabled(false);
+                forceField.setText("");
+                areaField.setText("");
             }
         }
         public void torqueFormula(double torqueForce, double torqueDistance){
+            try{
+                if(siUnits.isSelected()){
                     String force = forceField.getText();
                     double force1 = Double.parseDouble(force);
                     String distance = distanceField.getText();
@@ -495,6 +507,28 @@ public class mainFrame extends javax.swing.JFrame {
                     int torque3 = (int)torque2;
                     String torqueFinal = String.valueOf(torque3);
                     output.setText(torqueFinal);
+                }if(imperialUnits.isSelected()){
+                    String force = forceField.getText();
+                    double force1 = Double.parseDouble(force);
+                    String distance = distanceField.getText();
+                    double distance1 = Double.parseDouble(distance);
+                    double torque = force1 * distance1;
+                    String torqueFinal = String.valueOf(torque);
+                    output.setText(torqueFinal);
+                }else{
+                    errorLabel.setVisible(true);
+                    forceField.setEnabled(false);
+                    areaField.setEnabled(false);
+                    forceField.setText("");
+                    areaField.setText("");
+                }
+            }catch(NumberFormatException hi){
+                errorLabel.setVisible(true);
+                forceField.setEnabled(false);
+                areaField.setEnabled(false);
+                forceField.setText("");
+                areaField.setText("");
+            }
         }
     
 
