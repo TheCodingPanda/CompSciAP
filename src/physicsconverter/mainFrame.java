@@ -110,7 +110,7 @@ public class mainFrame extends javax.swing.JFrame {
 
         output.setEditable(false);
 
-        errorLabel.setText("Not a integer or double input*");
+        errorLabel.setText("Not a integer or double input or no selection of unit type");
 
         buttonGroup2.add(siUnits);
         siUnits.setText("SI Units");
@@ -144,7 +144,6 @@ public class mainFrame extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(imperialUnits)
                     .addComponent(siUnits)
-                    .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -174,7 +173,8 @@ public class mainFrame extends javax.swing.JFrame {
                                 .addComponent(workButton, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(pressureButton, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(torqueButton, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(calculate))))
+                            .addComponent(calculate)))
+                    .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

@@ -41,7 +41,6 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Component id="imperialUnits" min="-2" max="-2" attributes="0"/>
                   <Component id="siUnits" min="-2" max="-2" attributes="0"/>
-                  <Component id="errorLabel" min="-2" pref="269" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
@@ -83,6 +82,7 @@
                           <Component id="calculate" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="errorLabel" alignment="0" min="-2" pref="286" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -231,7 +231,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="errorLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Not a integer or double input*"/>
+        <Property name="text" type="java.lang.String" value="Not a integer or double input or no selection of unit type"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="siUnits">
