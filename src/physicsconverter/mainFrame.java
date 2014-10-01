@@ -61,7 +61,7 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Physics Conversion Program Beta Build v.0.2");
+        setTitle("Physics Conversion Program Beta Build v.0.3");
 
         forceLabel.setText("Force");
 
@@ -262,8 +262,6 @@ public class mainFrame extends javax.swing.JFrame {
                 String temperature = tempField.getText();
                 double temperature1 = Double.parseDouble(temperature);
                 tempFormula(temperature1);
-                tempField.setEnabled(false);
-                tempField.setText("");
             }} catch(NumberFormatException hi){
                 errorLabel.setVisible(true);
                 tempField.setEnabled(false);
@@ -276,10 +274,6 @@ public class mainFrame extends javax.swing.JFrame {
                 String area = areaField.getText();
                 double area1 = Double.parseDouble(area);
                 pressureFormula(force1, area1);
-                forceField.setEnabled(false);
-                areaField.setEnabled(false);
-                forceField.setText("");
-                areaField.setText("");
             }} catch(NumberFormatException hi){
                 errorLabel.setVisible(true);
                 forceField.setEnabled(false);
@@ -294,10 +288,6 @@ public class mainFrame extends javax.swing.JFrame {
                 String displacement = displacementField.getText();
                 double displacement1 = Double.parseDouble(displacement);
                 workFormula(force1, displacement1);
-                forceField.setEnabled(false);
-                displacementField.setEnabled(false);
-                forceField.setText("");
-                displacementField.setText("");
             }} catch(NumberFormatException hi){
                 errorLabel.setVisible(true);
                 forceField.setEnabled(false);
@@ -312,10 +302,6 @@ public class mainFrame extends javax.swing.JFrame {
                 String distance = distanceField.getText();
                 double distance1 = Double.parseDouble(distance);
                 torqueFormula(force1, distance1);
-                forceField.setEnabled(false);
-                distanceField.setEnabled(false);
-                forceField.setText("");
-                distanceField.setText("");
             }} catch(NumberFormatException hi){
                 errorLabel.setVisible(true);
                 forceField.setEnabled(false);
@@ -440,16 +426,16 @@ public class mainFrame extends javax.swing.JFrame {
                     String temperatureFinal = String.valueOf(temperature5);
                     output.setText(temperatureFinal);
             }if(imperialUnits.isSelected()){
-                String temperature = tempField.getText();
-                double temperature1 = Double.parseDouble(temperature);
-                int temperature2 = (int)temperature1;
-                String temperatureFinal = String.valueOf(temperature2);
-                output.setText(temperatureFinal);
+                    String temperature = tempField.getText();
+                    double temperature1 = Double.parseDouble(temperature);
+                    int temperature2 = (int)temperature1;
+                    String temperatureFinal = String.valueOf(temperature2);
+                    output.setText(temperatureFinal);
             }
             }catch(NumberFormatException hi){
-                errorLabel.setVisible(true);
-                tempField.setEnabled(false);
-                tempField.setText("");
+                    errorLabel.setVisible(true);
+                    tempField.setEnabled(false);
+                    tempField.setText("");
             }
         }
         public void pressureFormula(double pressureForce, double pressureArea){
