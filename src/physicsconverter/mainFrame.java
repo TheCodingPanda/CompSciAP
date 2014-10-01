@@ -414,7 +414,9 @@ public class mainFrame extends javax.swing.JFrame {
                 output.setText(temperatureFinal);
             }
             }catch(NumberFormatException hi){
-
+                errorLabel.setVisible(true);
+                tempField.setEnabled(false);
+                tempField.setText("");
             }
         }
         public void pressureFormula(double pressureForce, double pressureArea){
@@ -448,7 +450,11 @@ public class mainFrame extends javax.swing.JFrame {
                 }
             }
             catch(NumberFormatException hi){
-
+                errorLabel.setVisible(true);
+                forceField.setEnabled(false);
+                areaField.setEnabled(false);
+                forceField.setText("");
+                areaField.setText("");
             }
         }
         public void workFormula(double workForce, double workDisplacement){
@@ -482,7 +488,11 @@ public class mainFrame extends javax.swing.JFrame {
                 }
             }
             catch(NumberFormatException hi){
-
+                errorLabel.setVisible(true);
+                forceField.setEnabled(false);
+                areaField.setEnabled(false);
+                forceField.setText("");
+                areaField.setText("");
             }
         }
         public void torqueFormula(double torqueForce, double torqueDistance){
@@ -515,7 +525,11 @@ public class mainFrame extends javax.swing.JFrame {
                     areaField.setText("");
                 }
             }catch(NumberFormatException hi){
-
+                errorLabel.setVisible(true);
+                forceField.setEnabled(false);
+                areaField.setEnabled(false);
+                forceField.setText("");
+                areaField.setText("");
             }
         }
     
