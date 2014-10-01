@@ -55,9 +55,13 @@ public class mainFrame extends javax.swing.JFrame {
         siUnits = new javax.swing.JRadioButton();
         imperialUnits = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Physics Conversion Program Beta Build v.0.1");
+        setTitle("Physics Conversion Program Beta Build v.0.2");
 
         forceLabel.setText("Force");
 
@@ -130,52 +134,74 @@ public class mainFrame extends javax.swing.JFrame {
 
         jLabel1.setText("Note: All units imputed are in \"Imperial/Customary/US\" form ");
 
+        jLabel2.setText("Temperature(entering the Fahrenheit value); Imperial = same; SI = kelvin");
+
+        jLabel3.setText("Pressure; Imperial = pounds per square inch (PPI); SI = pascals");
+
+        jLabel4.setText("Work; Imperial = foot pound; SI = joule");
+
+        jLabel5.setText("Torque; Imperial = pound foot; SI = newton meter");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(165, 165, 165))
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(imperialUnits)
-                    .addComponent(siUnits)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(areaLabel)
-                                    .addComponent(forceLabel)
-                                    .addComponent(distanceLabel))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(areaField)
-                                    .addComponent(forceField)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(distanceField, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(displacementLabel)
-                                    .addComponent(tempLabel))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tempField)
-                                    .addComponent(displacementField))))
-                        .addGap(64, 64, 64)
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(tempButton)
-                                .addComponent(workButton, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(pressureButton, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(torqueButton, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(calculate)))
-                    .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1)
+                            .addComponent(imperialUnits)
+                            .addComponent(siUnits)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(areaLabel)
+                                            .addComponent(forceLabel)
+                                            .addComponent(distanceLabel))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(areaField)
+                                            .addComponent(forceField)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(distanceField, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(displacementLabel)
+                                            .addComponent(tempLabel))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(tempField)
+                                            .addComponent(displacementField))))
+                                .addGap(64, 64, 64)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(tempButton)
+                                        .addComponent(workButton, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(pressureButton, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(torqueButton, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(calculate)))
+                            .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(165, 165, 165))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,7 +241,15 @@ public class mainFrame extends javax.swing.JFrame {
                 .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(errorLabel)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -408,9 +442,8 @@ public class mainFrame extends javax.swing.JFrame {
             }if(imperialUnits.isSelected()){
                 String temperature = tempField.getText();
                 double temperature1 = Double.parseDouble(temperature);
-                double temperature2 = 5.0/9.0 * (temperature1 - 32);
-                int temperature3 = (int)temperature2;
-                String temperatureFinal = String.valueOf(temperature3);
+                int temperature2 = (int)temperature1;
+                String temperatureFinal = String.valueOf(temperature2);
                 output.setText(temperatureFinal);
             }
             }catch(NumberFormatException hi){
@@ -552,6 +585,10 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel forceLabel;
     private javax.swing.JRadioButton imperialUnits;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField output;
     private javax.swing.JRadioButton pressureButton;
     private javax.swing.JRadioButton siUnits;
